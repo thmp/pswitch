@@ -68,14 +68,12 @@
         
         function check(checkbox) {
             checkbox.prop('checked', true);
-            console.log('checked');
             desaturate_background(checkbox.parent().find('.pswitch-background'), 0.0);
             checkbox.parent().find('.pswitch-handle').css('left', '1px');
         }
         
         function uncheck(checkbox) {
             checkbox.removeAttr('checked');
-            console.log('unchecked');
             desaturate_background(checkbox.parent().find('.pswitch-background'), 1.0);
             checkbox.parent().find('.pswitch-handle').css('left', '29px');
         }
