@@ -100,6 +100,14 @@
             $(this).before("<div class='pswitch-on'>"+datachecked+"</div>")
                 .before("<div class='pswitch-background'><div class='pswitch-handle'></div></div>")
                 .before("<div class='pswitch-off'>"+dataunchecked+"</div>");
+
+            // handle click events on the labels
+            $(this).parent().find('.pswitch-on').click(function(e) {
+                check($(this).parent().find('input[type=checkbox]'));
+            });
+            $(this).parent().find('.pswitch-off').click(function(e) {
+                uncheck($(this).parent().find('input[type=checkbox]'));
+            });
             
             // assign mousedown callback
             $(this).parent().find('.pswitch-handle').mousedown(function(e) {
