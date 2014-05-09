@@ -1,6 +1,6 @@
 {
   "name": "pswitch",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": [
     "dist/jquery.pswitch.min.js",
     "dist/jquery.pswitch.min.css"
