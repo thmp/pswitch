@@ -1,0 +1,44 @@
+/* Minify: http://devilo.us/ */
+
+.pswitch-wrapper {
+    /*width:100%;*/
+}
+
+.pswitch-on {
+    float:left;
+    /*width:calc(50% - 45px);*/
+    text-align:right;
+    padding-right:10px;
+    padding-top:2px;
+}
+.pswitch-off {
+    float:left;
+    /*width:calc(50% - 45px);*/
+    padding-left:10px;
+    padding-top:2px;
+}
+
+.pswitch-background {
+    float:left;
+    width:50px;
+    height:20px;
+    background: #aaa;
+    box-shadow: inset 0px 0px 3px 0px #333;
+    border-radius:5px;
+    position:relative;
+    background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%);
+    cursor:default;
+}
+
+.pswitch-handle {
+    position:absolute;
+    top:1px;
+    left:29px;
+    width:20px;
+    height:18px;
+    background:white;
+    border-radius:5px;
+    box-shadow: 0 0 1px 0px #333;
+    background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    cursor:default;
+}

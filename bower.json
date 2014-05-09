@@ -1,0 +1,19 @@
+{
+  "name": "pswitch",
+  "version": "0.0.1",
+  "main": [
+    "dist/jquery.pswitch.min.js",
+    "dist/jquery.pswitch.min.css"
+  ],
+  "ignore": [
+    "src",
+    "demo",
+    ".gitignore",
+    "bower.json",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10.2",
+  }
+}

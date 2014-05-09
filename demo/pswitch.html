@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pswitch - jQuery extension</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../src/jquery.pswitch.js" />
+    <link rel="stylesheet" type="text/css" href="../src/jquery.pswitch.css">
+    <style type="text/css">
+        body {
+            font-family:Arial, Helvetica;
+            font-size:14px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input.pswitch").pswitch();
+        });
+    </script>
+</head>
+<body>
+    <input type="checkbox" value="live" class="pswitch" data-checked="Live" data-unchecked="Test">
+</body>
+</html>
