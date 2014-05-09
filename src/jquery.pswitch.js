@@ -134,6 +134,7 @@
             
             $(this).on('check', function(){check($(this))});
             $(this).on('uncheck', function(){uncheck($(this))});
+            $(this).on('toggle', function(){toggle($(this))});
             
             update_status($(this));
             
