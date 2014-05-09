@@ -77,6 +77,14 @@
             desaturate_background(checkbox.parent().find('.pswitch-background'), 1.0);
             checkbox.parent().find('.pswitch-handle').css('left', '29px');
         }
+
+        function toggle(checkbox) {
+            if(checkbox.prop('checked')) {
+                uncheck(checkbox);
+            } else {
+                check(checkbox);
+            }
+        }
         
         function update_status(checkbox) {
             if(checkbox.prop('checked')) {
@@ -117,12 +125,12 @@
                 $('body').css('user-select', 'none');
                 move(e);
             });
-            
-            // not working
-            /*$(this).change(function () {
-                console.log('changed');
-                update_status($(this)); 
-            });*/
+
+            $(this).parent().find('.pswitch-background').click(function(e) {
+                if(e.target == $(this)[0]) {
+                    toggle($(this).parent().find('input[type=checkbox]'));
+                }
+            });
             
             $(this).on('check', function(){check($(this))});
             $(this).on('uncheck', function(){uncheck($(this))});
