@@ -4,7 +4,13 @@ Turn boring checkboxes into cool-looking switches using pswitch.
 
 ## Usage instructions
 
-pswitch is easy to integrate. It relies on jQuery, which you probably already have included in your project. Just add the stylesheet and javascript files (here in /dist) to your project page. To create a switch, call
+pswitch is easy to integrate. It relies on jQuery, which you probably already have included in your project. Just add the stylesheet and javascript files (here in /dist) to your project page. If you use bower, you can add the project to your components.
+
+```javascript
+    "pswitch": "git@github.com:thmp/pswitch.git"
+```
+
+To create a switch, call
 
 ```javascript
 $("input.pswitch").pswitch();
@@ -39,6 +45,5 @@ $("input.pswitch").trigger("toggle");
 ## Still to be implemented
 - When changing the data-on/off labels of a checkbox, the html labels should change accordingly
 - Also support not having labels
-- Include options to
--- Change size
--- Change color
+- Include options to change color and size
+- Create a disabled state
