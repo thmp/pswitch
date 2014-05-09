@@ -20,6 +20,7 @@ You can check the current state of the checkbox using the standard jQuery method
 
 ```javascript
 $("input.pswitch").prop("checked");
+// returns true or false
 ```
 
 To check or uncheck the checkbox programmatically, use jQuery to trigger the check or uncheck event on them.
@@ -29,7 +30,7 @@ To check or uncheck the checkbox programmatically, use jQuery to trigger the che
 $("input.pswitch").trigger("check");
 
 // uncheck a checkbox
-$("input.pswitch").trigger("check");
+$("input.pswitch").trigger("uncheck");
 
 // you can also toggle the state!
 $("input.pswitch").trigger("toggle");
