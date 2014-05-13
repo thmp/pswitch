@@ -16,7 +16,7 @@ To create a switch, call
 $("input.pswitch").pswitch();
 ```
 
-To display labels on the sides of the switch for the on and off state, define two data attributes on the checkbox.
+To display labels on the sides of the switch for the on and off state, define two data attributes on the checkbox. The switch will be displayed without labels if you do not specify them.
 
 ```html
 <input type="checkbox" class="pswitch" data-checked="Live" data-unchecked="Test" />
@@ -54,5 +54,4 @@ $("input.pswitch").trigger("disable");
 
 ## Still to be implemented
 - When changing the data-on/off labels of a checkbox, the html labels should change accordingly
-- Also support not having labels
 - Include options to change color and size

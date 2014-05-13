@@ -121,9 +121,13 @@
                 .wrap("<div class='pswitch-wrapper'></div>")
                 .hide();
         
-            $(this).before("<div class='pswitch-on'>"+datachecked+"</div>")
-                .before("<div class='pswitch-background'><div class='pswitch-handle'></div></div>")
-                .before("<div class='pswitch-off'>"+dataunchecked+"</div>");
+            if (datachecked != null) {
+                $(this).before("<div class='pswitch-on'>"+datachecked+"</div>");
+            }
+            $(this).before("<div class='pswitch-background'><div class='pswitch-handle'></div></div>");
+            if (dataunchecked != null) {
+                $(this).before("<div class='pswitch-off'>"+dataunchecked+"</div>");
+            }
 
             // handle click events on the labels
             $(this).parent().find('.pswitch-on').click(function(e) {
