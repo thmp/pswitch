@@ -29,6 +29,14 @@ $("input.pswitch").prop("checked");
 // returns true or false
 ```
 
+Blue does not fit your webpage style? To change the switch color, just pass the color code for the switch on creation to the pswitch function.
+
+```javascript
+$("input.pswitch").pswitch({r: 25, g: 120, b: 30});
+```
+
+This would for example create a green switch.
+
 To check or uncheck the checkbox programmatically, use jQuery to trigger the check or uncheck event on them.
 
 ```javascript

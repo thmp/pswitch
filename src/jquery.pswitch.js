@@ -18,8 +18,10 @@
         }
         
         function desaturate_background(element, k) {
-            rgb1 = desaturate(30, 87, 153, k);
-            rgb2 = desaturate(125, 185, 232, k);
+            //rgb1 = desaturate(30, 87, 153, k);
+            //rgb2 = desaturate(125, 185, 232, k);
+            rgb1 = desaturate(settings.r, settings.g, settings.b, k);
+            rgb2 = desaturate(settings.r2, settings.g2, settings.b2, k);
             rgb1 = rgb_to_string(rgb1[0], rgb1[1], rgb1[2]);
             rgb2 = rgb_to_string(rgb2[0], rgb2[1], rgb2[2]);
             element.css('background', create_gradient(rgb1, rgb2));
@@ -45,8 +47,14 @@
         
         
         var settings = $.extend({
-            
-        }, options);  
+            r: 30,
+            g: 87,
+            b: 153
+        }, options);
+        settings.r2 = settings.r > 155 ? 255 : settings.r + 100;
+        settings.g2 = settings.g > 155 ? 255 : settings.g + 100;
+        settings.b2 = settings.b > 155 ? 255 : settings.b + 100;
+        console.log(settings);
         
         $(document).mousemove(function(e) {
             if(clicked) {
