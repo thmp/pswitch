@@ -78,6 +78,16 @@
             checkbox.parent().find('.pswitch-handle').css('left', '29px');
         }
 
+        function disable(checkbox) {
+            checkbox.attr("disabled", "disabled");
+            checkbox.parent().addClass("pswitch-disabled");
+        }
+
+        function enable(checkbox) {
+            checkbox.removeAttr("disabled");
+            checkbox.parent().removeClass("pswitch-disabled");
+        }
+
         function toggle(checkbox) {
             if(checkbox.prop('checked')) {
                 uncheck(checkbox);
@@ -91,6 +101,12 @@
                 check(checkbox);   
             } else {
                 uncheck(checkbox);
+            }
+
+            if(checkbox.is(":disabled")) {
+                disable(checkbox);
+            } else {
+                enable(checkbox);
             }
         }
         
@@ -111,30 +127,41 @@
 
             // handle click events on the labels
             $(this).parent().find('.pswitch-on').click(function(e) {
-                check($(this).parent().find('input[type=checkbox]'));
+                if (! $(this).parent().find('input[type=checkbox]').is(":disabled")) {
+                    check($(this).parent().find('input[type=checkbox]'));
+                }
             });
             $(this).parent().find('.pswitch-off').click(function(e) {
-                uncheck($(this).parent().find('input[type=checkbox]'));
+                if (! $(this).parent().find('input[type=checkbox]').is(":disabled")) {
+                    uncheck($(this).parent().find('input[type=checkbox]'));
+                }
             });
             
             // assign mousedown callback
             $(this).parent().find('.pswitch-handle').mousedown(function(e) {
-                active = $(this);
-                clicked = true;
-                offset = $(this).parent().offset().left;
-                $('body').css('user-select', 'none');
-                move(e);
+                // only handle event if checkbox is enabled
+                if (! $(this).parent().parent().find('input[type=checkbox]').is(":disabled")) {
+                    active = $(this);
+                    clicked = true;
+                    offset = $(this).parent().offset().left;
+                    $('body').css('user-select', 'none');
+                    move(e);
+                } 
             });
 
             $(this).parent().find('.pswitch-background').click(function(e) {
-                if(e.target == $(this)[0]) {
-                    toggle($(this).parent().find('input[type=checkbox]'));
-                }
+                if (! $(this).parent().find('input[type=checkbox]').is(":disabled")) {
+                    if(e.target == $(this)[0]) {
+                        toggle($(this).parent().find('input[type=checkbox]'));
+                    }
+                }   
             });
             
             $(this).on('check', function(){check($(this))});
             $(this).on('uncheck', function(){uncheck($(this))});
             $(this).on('toggle', function(){toggle($(this))});
+            $(this).on('enable', function(){enable($(this))});
+            $(this).on('disable', function(){disable($(this))});
             
             update_status($(this));
             

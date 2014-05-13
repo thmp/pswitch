@@ -42,6 +42,16 @@ $("input.pswitch").trigger("uncheck");
 $("input.pswitch").trigger("toggle");
 ```
 
+The switch also supports enabled and disabled states. You can manually set the checkbox state in the html before creating a pswitch or programmatically afterwards using these triggers.
+
+```javascript
+// enable switch
+$("input.pswitch").trigger("enable");
+
+// disable switch
+$("input.pswitch").trigger("disable");
+```
+
 ## Still to be implemented
 - When changing the data-on/off labels of a checkbox, the html labels should change accordingly
 - Also support not having labels
