@@ -1,6 +1,7 @@
 # pswitch
 
 Turn boring checkboxes into cool-looking switches using pswitch. 
+
 Demo at http://www.pischke.me/pswitch/demo/pswitch.html
 
 ## Usage instructions
