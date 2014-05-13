@@ -62,4 +62,4 @@ $("input.pswitch").trigger("disable");
 
 ## Still to be implemented
 - When changing the data-on/off labels of a checkbox, the html labels should change accordingly
-- Include options to change color and size
+- Include options to change size
