@@ -3,7 +3,7 @@
 (function($) {
     $.fn.pswitch = function(options) {
         
-        var newpos, clicked, active, offset;
+        var newpos, clicked, active, offset, transition;
 
         function desaturate(r, g, b, k) { // k is how much color should be desaturated where k=1 is full desaturation
             var intensity = 0.3 * r + 0.59 * g + 0.11 * b;
@@ -63,6 +63,7 @@
         });
         $(document).mouseup(function(e) {
             if (clicked) {
+                active.css('transition', transition);
                 checkbox = active.parent().parent().find('input[type=checkbox]');
                 if (e.pageX-22/2.0 - offset < 29/2.0) {
                     check(checkbox);
@@ -153,6 +154,8 @@
             $(this).parent().find('.pswitch-handle').mousedown(function(e) {
                 // only handle event if checkbox is enabled
                 if (! $(this).parent().parent().find('input[type=checkbox]').is(":disabled")) {
+                    transition = $(this).css('transition');
+                    $(this).css('transition', 'none');
                     active = $(this);
                     clicked = true;
                     offset = $(this).parent().offset().left;
