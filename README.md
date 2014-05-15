@@ -4,15 +4,28 @@ Turn boring checkboxes into cool-looking switches using pswitch.
 
 Demo at http://www.pischke.me/pswitch/demo/pswitch.html
 
-## Usage instructions
+## Getting started
 
-pswitch is easy to integrate. It relies on jQuery, which you probably already have included in your project. Just add the stylesheet and javascript files (here in /dist) to your project page. If you use bower, you can add the project to your components.
+pswitch is easy to integrate. It relies on jQuery, which you probably already have included in your project. Include the stylesheet and javascript from the dist folder into your project. 
+
+```html
+<link rel="stylesheet" type="text/css" href="jquery.pswitch.min.css" />
+<script type="javascript" src="jquery.js"></script>
+<script type="javascript" src="jquery.pswitch.min.js"></script>
+```
+
+If you use bower, you can add the project to your components.
 
 ```javascript
     "pswitch": "git@github.com:thmp/pswitch.git"
 ```
 
-To create a switch, call
+Create your checkboxes.
+```html
+<input type="checkbox" class="pswitch" checked />
+```
+
+Initialize the switch.
 
 ```javascript
 $("input.pswitch").pswitch();
@@ -23,6 +36,8 @@ To display labels on the sides of the switch for the on and off state, define tw
 ```html
 <input type="checkbox" class="pswitch" data-checked="Live" data-unchecked="Test" />
 ```
+
+## Usage instructions
 
 You can check the current state of the checkbox using the standard jQuery method.
 
