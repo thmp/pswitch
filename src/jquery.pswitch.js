@@ -119,7 +119,12 @@
         }
         
         return this.filter('input[type=checkbox]').each(function() {
-              
+            
+            // do not continue if this is already a pswitch
+            if ($(this).parent().hasClass("pswitch-wrapper")) {
+                return;
+            }
+
             // find values
             datachecked = $(this).attr("data-checked");
             dataunchecked = $(this).attr("data-unchecked");
