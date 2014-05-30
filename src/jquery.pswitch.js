@@ -54,7 +54,6 @@
         settings.r2 = settings.r > 155 ? 255 : settings.r + 100;
         settings.g2 = settings.g > 155 ? 255 : settings.g + 100;
         settings.b2 = settings.b > 155 ? 255 : settings.b + 100;
-        console.log(settings);
         
         $(document).mousemove(function(e) {
             if(clicked) {
