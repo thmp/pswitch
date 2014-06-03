@@ -47,6 +47,9 @@
     cursor:default;
 }
 
+.pswitch-disabled .pswitch-background, .pswitch-disabled .pswitch-handle {
+    cursor:not-allowed;
+}
 .pswitch-disabled .pswitch-background {
     background: linear-gradient(to bottom, #999999 0%,#eaeaea 100%) !important;
 }
