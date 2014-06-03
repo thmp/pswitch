@@ -50,3 +50,7 @@
 .pswitch-disabled .pswitch-background {
     background: linear-gradient(to bottom, #999999 0%,#eaeaea 100%) !important;
 }
+.pswitch-disabled .pswitch-handle {
+    background: #ffffff !important;
+    opacity:.5;
+}
