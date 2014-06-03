@@ -2,6 +2,8 @@
 
 Turn boring checkboxes into cool-looking switches using pswitch. 
 
+MIT License.
+
 Demo at http://www.pischke.me/pswitch/demo/pswitch.html
 
 ## Getting started
