@@ -26,7 +26,7 @@
     width:50px;
     height:20px;
     background: #aaa;
-    box-shadow: inset 0px 0px 3px 0px #333;
+    box-shadow: inset 0px 0px 3px 0px #666;
     border-radius:5px;
     position:relative;
     background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%);
