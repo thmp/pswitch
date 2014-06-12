@@ -81,13 +81,13 @@
 		});
 		
 		function check(checkbox) {
-			checkbox.prop('checked', true);
+			checkbox.prop('checked', true).trigger('change');
 			desaturate_background(checkbox.parent().find('.pswitch-background'), 0.0);
 			checkbox.parent().find('.pswitch-handle').css('left', '1px');
 		}
 		
 		function uncheck(checkbox) {
-			checkbox.removeAttr('checked');
+            checkbox.prop('checked', false).trigger('change');
 			desaturate_background(checkbox.parent().find('.pswitch-background'), 1.0);
 			checkbox.parent().find('.pswitch-handle').css('left', '29px');
 		}
