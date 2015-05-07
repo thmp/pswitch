@@ -8,6 +8,8 @@ Demo at http://www.pischke.me/pswitch/demo/pswitch.html
 
 ## Getting started
 
+*AngularJS*: There is also an angularjs directive of the switch created by Pedro Catré at https://github.com/pedrocatre/pwSwitch
+
 pswitch is easy to integrate. It relies on jQuery, which you probably already have included in your project. Include the stylesheet and javascript from the dist folder into your project. 
 
 ```html
